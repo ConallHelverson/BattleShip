@@ -1,6 +1,5 @@
 package helverson.conall;
 
-public class Board {
-	// Hello
+public class Ship {
 
 }
