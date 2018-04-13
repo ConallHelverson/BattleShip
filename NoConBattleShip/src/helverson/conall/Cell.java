@@ -21,14 +21,14 @@ public class Cell {
 	 * @param yCoordinate :ycoordinate of cell
 	 * @param state :empty or filled
 	 */
-	public createCell(int xCoordinate, int yCoordinate, enum state) {
+	public Cell(int xCoordinate, int yCoordinate, CellState state) {
 		x = xCoordinate;
 		y = yCoordinate;
 		s = state;
 	}
 
-
-	public void changeState(enum state){
+	//Change state of a cell.
+	public void changeState(CellState state){
 	s=state;
 	}
 	
@@ -62,10 +62,10 @@ public class Cell {
 	 * @return true or false (Filled or not)
 	 */
 	public boolean cellIsFilled() {
-		if(s!="empty"){
+		if(s!=CellState.Empty){
 			return true;
 		}
 		else return false;
+		}
 	}
 
-}
