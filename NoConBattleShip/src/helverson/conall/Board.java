@@ -2,33 +2,39 @@ package helverson.conall;
 
 public class Board {
 	
-	private int width=10;
-	private int length=10;
+	private int width;
+	private int length;
+	private Cell[][] board;
 	
 	public Board(int y, int x){
 		
 		width=x;
 		length=y;
-		Cell[][] Board=new Cell[y][x];
+		board = new Cell[length][width];
 		
 		for(int i=0;i<x; i++){
 			for (int j=0;j<y;j++){
-			Board[j][i]=new Cell();
+				board[i][j]= new Cell();
 			}
 	}
 	}	
 	
-	public Cell displayBoard(Cell[][] Board){
-
-		for(int i=0;i<Board[0].length;i++){
-			for (int j=0;j<Board.length;j++){
-				return Board[i][j];
+	@Override
+	public String toString(){
+		StringBuffer sb = new StringBuffer();
+		
+		
+		for(int i=0;i<board[0].length;i++){
+			for (int j=0;j<board.length;j++){
+				 sb.append(board[i][j]);
+				 sb.append(" ");
 			}
-			System.out.println("");
+			sb.append("\n");
 		}
-		return null;
+		
+		return sb.toString();
 	}
-	
+		
 		
 	//public Void createBoard(int y, int x){
 	//	width=x;
