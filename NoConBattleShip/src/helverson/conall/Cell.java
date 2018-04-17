@@ -2,30 +2,22 @@ package helverson.conall;
 
 public class Cell {
 
-	private int x;
-	private int y;
+
 	private CellState s;
 
-	/**
-	 * Default coordinate is (0,0), or A1
-	 */
 	public Cell() {
-		x = 0;
-		y = 0;
+	
 		s = CellState.Empty;
 	}
 
 	/**
-	 * You can create a cell using an x, y coordinate, and the state.
-	 * @param xCoordinate :xcoordinate of cell
-	 * @param yCoordinate :ycoordinate of cell
+	 * You can create a cell using astate.
 	 * @param state :empty or filled
+	 * @return 
 	 */
-	public Cell(int xCoordinate, int yCoordinate, CellState state) {
-		x = xCoordinate;
-		y = yCoordinate;
-		s = state;
-	}
+	//public void createCell(CellState state) {
+	//	s = state;
+	//}
 
 	//Change state of a cell.
 	public void changeState(CellState state){
@@ -33,14 +25,6 @@ public class Cell {
 	}
 	
 	//Next three just return x coordinate, y coordinate, and state.
-	
-	public int getXValue() {
-		return x;
-	}
-
-	public int getYValue() {
-		return y;
-	}
 	
 	public String getState(){
 		if (s==CellState.Empty){ 
