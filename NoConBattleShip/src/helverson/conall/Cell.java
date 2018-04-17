@@ -11,7 +11,7 @@ public class Cell {
 	}
 
 	/**
-	 * You can create a cell using astate.
+	 * You can create a cell using a state.
 	 * @param state :empty or filled
 	 * @return 
 	 */
