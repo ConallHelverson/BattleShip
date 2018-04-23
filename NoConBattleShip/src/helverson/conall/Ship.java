@@ -33,15 +33,7 @@ public class Ship {
 		shipLeft -= 1;
 	}
 	
-/*	public void ShipPlace() {
-		if(isPlaceable == true){
-			changeState(Filled);
-		}
-		if (isHorizontal == true) {
-			changeState(Filled); 
-		}
-		else if (isHorizontal == false) {
-			
-		}
-	}*/
+	public int size(){
+		return size;
+	}
 }

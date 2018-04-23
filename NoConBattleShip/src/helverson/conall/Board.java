@@ -6,18 +6,27 @@ public class Board {
 	private int length;
 	private Cell[][] board;
 	
-	public Board(int y, int x){
+	public Board(int yValue, int xValue){
 		
-		width=x;
-		length=y;
+		width=xValue;
+		length=yValue;
 		board = new Cell[length][width];
 		
-		for(int i=0;i<x; i++){
-			for (int j=0;j<y;j++){
+		for(int i=0;i<xValue; i++){
+			for (int j=0;j<yValue;j++){
 				board[i][j]= new Cell();
 			}
 	}
 	}	
+	
+	public int getXValue(){
+		return width;
+	}
+	
+	public int getYValue(){
+		return length;
+	}
+	
 	
 	@Override
 	public String toString(){
@@ -33,6 +42,23 @@ public class Board {
 		}
 		
 		return sb.toString();
+	}
+	
+	public boolean isPlaceable(boolean isHorizontal, int shipSize, int x, int y){
+		if (isHorizontal==true){
+			//board.length<(x+shipSize)||
+		
+			if (board[0].length<(x+shipSize)||0>x||0>y||board.length<y){	
+			return false;
+			}	
+		}
+		else if(isHorizontal==false){
+			if (board.length<(y+shipSize)||0>x||0>y||board[0].length<x){
+				return false;
+			}
+		}
+		
+		return true;
 	}
 		
 		
